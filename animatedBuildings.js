@@ -8,6 +8,16 @@ const typeMaterials = {
     'lab': new THREE.MeshLambertMaterial({color: '#e68dac', side: THREE.DoubleSide}),
 };
 
+/*
+Hospital
+Hotel
+K-12 School
+Laboratory
+Multifamily Housing
+Office
+Residence Hall/Dormitory
+ */
+
 const animationHelper = function (currentVal) {
     this.currentVal = currentVal || 0;
 
@@ -53,14 +63,15 @@ const application = function (app) {
     app.onTick = function () {
         if (!app.cityModel) return;
         app.cityModel.visible = !inter.gridMode;
+        app.matrixCanvas.geometry.visible = inter.gridMode;
         if (!app.typeModels) return;
         const mode = inter.gridMode ? 'grid' : 'city';
         Object.keys(app.typeModels).forEach(function (id) {
             var typeModel = app.typeModels[id];
             const position = typeModel.modePositions[mode];
 
-            typeModel.object.position.x = typeModel.animationHelpers.x.approachTarget(position.x) ;
-            typeModel.object.position.y = typeModel.animationHelpers.y.approachTarget(position.y) ;
+            typeModel.object.position.x = typeModel.animationHelpers.x.approachTarget(position.x);
+            typeModel.object.position.y = typeModel.animationHelpers.y.approachTarget(position.y);
             typeModel.object.position.z = typeModel.animationHelpers.z.approachTarget(position.z);
         });
     };
@@ -121,6 +132,13 @@ const application = function (app) {
 
         app.axes = new THREE.AxisHelper(100);
         app.scene.add(app.axes);
+
+        const labelsY = [];
+        for (var j = 1; j <= topNum; j++) {
+            labelsY.push(j);
+        }
+        app.matrixCanvas = matrixCanvasTexture(1000, 1000, types, labelsY);
+        app.scene.add(app.matrixCanvas.geometry);
 
         app.render();
     };
@@ -201,9 +219,9 @@ const application = function (app) {
                         modePositions: {
                             city: offset,
                             grid: {
-                                x: gridSize.x * i - bounds.min.x,
+                                x: 100 + gridSize.x * i - bounds.min.x,
                                 y: -bounds.min.y,
-                                z: gridSize.y * zPos - bounds.min.z
+                                z: 50 + gridSize.y * zPos - bounds.min.z
                             }
                         },
                         animationHelpers: {
