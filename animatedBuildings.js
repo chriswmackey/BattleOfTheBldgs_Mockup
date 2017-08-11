@@ -1,7 +1,7 @@
 "use strict";
 
 const types = ['lab', 'office'];
-const topNum = 2;
+const topNum = 10;
 
 const typeMaterials = {
     'office': new THREE.MeshLambertMaterial({color: '#ffa827', side: THREE.DoubleSide}),
@@ -285,7 +285,7 @@ const application = function (app) {
     app.restoreCameraPos = function (savedState) {
         //can be saved with Q key debug log
         savedState = {
-            "position": {"x": 631.5208780211974, "y": 754.9442096008233, "z": 726.4740187945285},
+            "position": {"x": 631.5208780211974, "y": 754.9442096008233, "z": 9000},
             "rotation": {
                 "_x": -2.239196402239001,
                 "_y": -0.14200123994430297,
