@@ -8,13 +8,61 @@ const typeMaterials = {
     'lab': new THREE.MeshLambertMaterial({color: '#e68dac', side: THREE.DoubleSide}),
 };
 
+const animationHelper = function (currentVal) {
+    this.currentVal = currentVal || 0;
+
+    /** @type {Number} */
+    var _stepsToCatchUp = 18;
+    /** @type {Number} */
+    var _maxDist = 80;
+
+    var _approachTarget = function (targetVal, currentVal) {
+        if (targetVal === null || isNaN(targetVal)) {
+            return currentVal;
+        }
+        if (currentVal === null || isNaN(currentVal)) {
+            return targetVal;
+        }
+        var tol = Math.max(0.000001, Math.abs(targetVal / 10000));//base tolerance on size of target...
+        var diff = (targetVal - currentVal);
+        if (Math.abs(diff) < tol) return targetVal;
+        var dist = diff / _stepsToCatchUp;
+        if (dist > _maxDist) {
+            dist = _maxDist;
+        }
+        if (dist < -_maxDist) {
+            dist = -_maxDist;
+        }
+        return currentVal + dist;
+    };
+
+    this.approachTarget = function (targetVal) {
+        // console.log(this.currentVal, targetVal);
+        this.currentVal = _approachTarget(targetVal, this.currentVal);
+        return this.currentVal;
+    };
+};
+
 const application = function (app) {
     const _split = 0.5;
     const xVector = new THREE.Vector3(1, 0, 0);
     const yVector = new THREE.Vector3(0, 1, 0);
     const zVector = new THREE.Vector3(0, 0, 1);
 
+
     app.onTick = function () {
+        if (!app.cityModel) return;
+        app.cityModel.visible = !inter.gridMode;
+        if (!app.typeModels) return;
+        const mode = inter.gridMode ? 'grid' : 'city';
+        Object.keys(app.typeModels).forEach(function (id) {
+            var typeModel = app.typeModels[id];
+            const position = typeModel.modePositions[mode];
+
+            typeModel.object.position.x = typeModel.animationHelpers.x.approachTarget(position.x) ;
+            typeModel.object.position.y = typeModel.animationHelpers.y.approachTarget(position.y) ;
+            typeModel.object.position.z = typeModel.animationHelpers.z.approachTarget(position.z);
+        });
     };
     app.setup = function () {
         app.scene = new THREE.Scene();
@@ -131,11 +179,14 @@ const application = function (app) {
             app.cityModel = object;
         });
 
+        const gridSize = {x: 100, y: 150};
         app.typeModels = {};
         types.forEach(function (type, i) {
             for (var j = 1; j <= topNum; j++) {
-                const id = type + '_' + j + '.obj';
-                loader.load('obj/' + id, function (object) {
+                const zPos = j;
+                const id = type + '_' + j;
+                loader.load('obj/' + id + '.obj', function (object) {
+                    const bounds = new THREE.Box3().setFromObject(object);
                     setMaterials(object, typeMaterials[type], false, false);
                     object.scale.set(scale, scale, scale);
 
@@ -145,7 +196,23 @@ const application = function (app) {
 
                     app.scene.add(object);
 
-                    app.typeModels[id] = object;
+                    app.typeModels[id] = {
+                        object: object,
+                        modePositions: {
+                            city: offset,
+                            grid: {
+                                x: gridSize.x * i - bounds.min.x,
+                                y: -bounds.min.y,
+                                z: gridSize.y * zPos - bounds.min.z
+                            }
+                        },
+                        animationHelpers: {
+                            x: new animationHelper(0),
+                            y: new animationHelper(0),
+                            z: new animationHelper(0)
+                        }
+                    };
+
                 });
             }
         });
@@ -219,6 +286,24 @@ const application = function (app) {
     app.setup();
 };
 
+const interfacer = function (inter) {
+    inter.gridMode = false;
+
+    inter.setup = function () {
+        const gui = new dat.GUI();
+        gui.add(inter, 'gridMode').onChange(inter.update);
+
+        inter.update = function () {
+
+        };
+
+        if (inter.onUpdate) inter.onUpdate();
+    };
+
+    inter.setup();
+};
 
 const app = {};
 new application(app);
+const inter = {};
+new interfacer(inter);
