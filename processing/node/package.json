@@ -1,0 +1,16 @@
+  {
+  "name": "battle-otb-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ProcessCSV.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.1.7",
+    "numeral": "^2.0.6",
+    "promise": "^8.0.1"
+  }
+}

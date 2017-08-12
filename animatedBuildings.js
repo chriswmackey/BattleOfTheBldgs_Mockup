@@ -210,7 +210,8 @@ const application = function (app) {
         Object.keys(typeColors).forEach(function (type) {
             typeMaterials[type] = new THREE.MeshLambertMaterial({
                 color: typeColors[type],
-                emissive: chroma(typeColors[type]).darken().hex()
+                emissive: chroma(typeColors[type]).darken().hex(),
+                side: THREE.DoubleSide
             });
         });
 
