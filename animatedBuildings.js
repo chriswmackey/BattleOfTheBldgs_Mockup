@@ -18,6 +18,7 @@ const materialExBldgs = new THREE.MeshLambertMaterial({
 
 const backgroundColor = '#333333';
 
+const padSize = {left: 800, right: 200, top: 600, bottom: 200};
 const gridSize = {x: 800, y: 800};
 
 // const typeMaterials = {
@@ -73,15 +74,10 @@ const animationHelper = function (currentVal) {
 };
 
 const application = function (app) {
-    const _split = 0.5;
-    const xVector = new THREE.Vector3(1, 0, 0);
-    const yVector = new THREE.Vector3(0, 1, 0);
-    const zVector = new THREE.Vector3(0, 0, 1);
-
-
     app.onTick = function () {
-        if (!app.cityModel) return;
-        app.cityModel.visible = !inter.gridMode;
+        if (app.cityModel) {
+            app.cityModel.visible = !inter.gridMode;
+        }
         app.matrixCanvas.geometry.visible = inter.gridMode;
         if (!app.typeModels) return;
         const mode = inter.gridMode ? 'grid' : 'city';
@@ -105,7 +101,7 @@ const application = function (app) {
 
         //left, right, top, bottom, near, far
         // app.camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 5000);
-        app.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 10000);
+        app.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 100, 80000);
         // app.camera.position.set(0, 0, 100); // all components equal
         // app.camera.lookAt(app.scene.position); // or the origin
         // app.camera.position.z = 1000;
@@ -156,7 +152,7 @@ const application = function (app) {
         for (var j = 1; j <= topNum; j++) {
             labelsY.push(j);
         }
-        app.matrixCanvas = matrixCanvasTexture(1000, 1000, types, labelsY);
+        app.matrixCanvas = matrixCanvasTexture(types, labelsY);
         app.scene.add(app.matrixCanvas.geometry);
 
         app.render();
@@ -221,7 +217,7 @@ const application = function (app) {
         app.typeModels = {};
         types.forEach(function (type, i) {
             for (var j = 1; j <= topNum; j++) {
-                const zPos = j;
+                const zPos = j - 1;
                 const id = type + '_' + j;
                 loader.load('obj/' + id + '.obj', function (object) {
                     const bounds = new THREE.Box3().setFromObject(object);
@@ -239,9 +235,9 @@ const application = function (app) {
                         modePositions: {
                             city: offset,
                             grid: {
-                                x: 100 + gridSize.x * i - bounds.min.x,
+                                x: padSize.left + gridSize.x * i - bounds.min.x,
                                 y: -bounds.min.y,
-                                z: 50 + gridSize.y * zPos - bounds.min.z
+                                z: padSize.top + gridSize.y * zPos - bounds.min.z
                             }
                         },
                         animationHelpers: {
@@ -264,12 +260,12 @@ const application = function (app) {
 
         app.controls.update();
         // app.renderViews(0.75);
-        app.renderViews(_split);
+        app.renderViews();
 
         // app.renderer.render(app.scene, app.camera);
     };
 
-    app.renderViews = function (split) {
+    app.renderViews = function () {
         const views = [
             {// main view - points etc.
                 left: 0,
