@@ -18,6 +18,7 @@ const materialExBldgs = new THREE.MeshLambertMaterial({
 
 const backgroundColor = '#333333';
 
+const gridSize = {x: 800, y: 800};
 
 // const typeMaterials = {
 //     'office': new THREE.MeshLambertMaterial({color: '#ffa827', emissive: '#ffa827', side: THREE.DoubleSide}),
@@ -39,12 +40,12 @@ Residence Hall/Dormitory
 const animationHelper = function (currentVal) {
     this.currentVal = currentVal || 0;
 
-    /** @type {Number} */
-    var _stepsToCatchUp = 18;
-    /** @type {Number} */
-    var _maxDist = 80;
-
     var _approachTarget = function (targetVal, currentVal) {
+        /** @type {Number} */
+        var stepsToCatchUp = (inter.gridMode) ? 18 : 10; //when city background is on, the framerate drops
+        /** @type {Number} */
+        var maxDist = (inter.gridMode) ? 300 : 450;
+
         if (targetVal === null || isNaN(targetVal)) {
             return currentVal;
         }
@@ -54,12 +55,12 @@ const animationHelper = function (currentVal) {
         var tol = Math.max(0.000001, Math.abs(targetVal / 10000));//base tolerance on size of target...
         var diff = (targetVal - currentVal);
         if (Math.abs(diff) < tol) return targetVal;
-        var dist = diff / _stepsToCatchUp;
-        if (dist > _maxDist) {
-            dist = _maxDist;
+        var dist = diff / stepsToCatchUp;
+        if (dist > maxDist) {
+            dist = maxDist;
         }
-        if (dist < -_maxDist) {
-            dist = -_maxDist;
+        if (dist < -maxDist) {
+            dist = -maxDist;
         }
         return currentVal + dist;
     };
@@ -217,7 +218,6 @@ const application = function (app) {
             });
         });
 
-        const gridSize = {x: 1000, y: 1000};
         app.typeModels = {};
         types.forEach(function (type, i) {
             for (var j = 1; j <= topNum; j++) {
