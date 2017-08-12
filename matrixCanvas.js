@@ -3,11 +3,11 @@ function matrixCanvasTexture(width, height, xLabels, yLabels) {
     var ctx = canvas.getContext('2d');
 
     function changeCanvas() {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = backgroundColor;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.font = '32pt Arial';
-        ctx.fillStyle = '#333333';
+        ctx.fillStyle = '#cccccc';
 
         yLabels.forEach(function (label, i) {
             ctx.fillText(label, 20, 200 + i * 100);

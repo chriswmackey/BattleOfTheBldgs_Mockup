@@ -1,12 +1,30 @@
 "use strict";
 
-const types = ['lab', 'office'];
+const types = ['lab', 'office', 'hospital', 'multifamily'];
 const topNum = 10;
 
-const typeMaterials = {
-    'office': new THREE.MeshLambertMaterial({color: '#ffa827', side: THREE.DoubleSide}),
-    'lab': new THREE.MeshLambertMaterial({color: '#e68dac', side: THREE.DoubleSide}),
+const typeColors = {
+    'office': '#ffa827',
+    'lab': '#e68dac',
+    'hospital': '#43e6b2',
+    'multifamily': '#cb74ff',
 };
+
+const materialExBldgs = new THREE.MeshLambertMaterial({
+    color: '#595b6d',
+    side: THREE.FrontSide,
+    // emissive: '#707287'
+});
+
+const backgroundColor = '#333333';
+
+
+// const typeMaterials = {
+//     'office': new THREE.MeshLambertMaterial({color: '#ffa827', emissive: '#ffa827', side: THREE.DoubleSide}),
+//     'lab': new THREE.MeshLambertMaterial({color: '#e68dac', side: THREE.DoubleSide}),
+//     'hospital': new THREE.MeshLambertMaterial({color: '#43e6b2', side: THREE.DoubleSide}),
+//     'multifamily': new THREE.MeshLambertMaterial({color: '#cb74ff', side: THREE.DoubleSide}),
+// };
 
 /*
 Hospital
@@ -92,7 +110,7 @@ const application = function (app) {
         // app.camera.position.z = 1000;
 
         app.renderer = new THREE.WebGLRenderer();
-        app.renderer.setClearColor('#ffffff');
+        app.renderer.setClearColor(backgroundColor);
         app.renderer.setSize(window.innerWidth, window.innerHeight);
 
         app.controls = new THREE.OrbitControls(app.camera, app.renderer.domElement);
@@ -176,12 +194,6 @@ const application = function (app) {
 
         const offset = {x: 0, y: 0, z: 0};
 
-        const materialExBldgs = new THREE.MeshLambertMaterial({
-            color: '#a1a6c6',
-            side: THREE.FrontSide,
-            emissive: '#707287'
-        });
-
         const scale = 1;
         const loader = new THREE.OBJLoader(manager);
 
@@ -197,7 +209,15 @@ const application = function (app) {
             app.cityModel = object;
         });
 
-        const gridSize = {x: 100, y: 150};
+        const typeMaterials = {};
+        Object.keys(typeColors).forEach(function (type) {
+            typeMaterials[type] = new THREE.MeshLambertMaterial({
+                color: typeColors[type],
+                emissive: chroma(typeColors[type]).darken().hex()
+            });
+        });
+
+        const gridSize = {x: 1000, y: 1000};
         app.typeModels = {};
         types.forEach(function (type, i) {
             for (var j = 1; j <= topNum; j++) {
