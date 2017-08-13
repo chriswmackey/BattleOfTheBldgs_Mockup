@@ -1,0 +1,627 @@
+[
+  {
+    "ID": "hospital_1",
+    "Rank": 1,
+    "Property Name": "PHS-Spaulding Rehabilitation Hospital - West Roxbury",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 71242,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 141.8
+  },
+  {
+    "ID": "hospital_2",
+    "Rank": 2,
+    "Property Name": "Tufts Medical Center",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 2102964,
+    "ENERGY STAR Score": 75,
+    "Site EUI": 174.4
+  },
+  {
+    "ID": "hospital_3",
+    "Rank": 3,
+    "Property Name": "Hebrew Rehabilitation Center",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 419575,
+    "ENERGY STAR Score": 91,
+    "Site EUI": 182.4
+  },
+  {
+    "ID": "hospital_4",
+    "Rank": 4,
+    "Property Name": "Carney Hospital",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 540000,
+    "ENERGY STAR Score": 74,
+    "Site EUI": 194.1
+  },
+  {
+    "ID": "hospital_5",
+    "Rank": 5,
+    "Property Name": "Boston Medical Center",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 2828429,
+    "ENERGY STAR Score": 33,
+    "Site EUI": 215.2
+  },
+  {
+    "ID": "hospital_6",
+    "Rank": 6,
+    "Property Name": "St. Elizabeth Medical Center",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 651000,
+    "ENERGY STAR Score": 89,
+    "Site EUI": 225.4
+  },
+  {
+    "ID": "hospital_7",
+    "Rank": 7,
+    "Property Name": "PHS-MGH Main Campus",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 4637402,
+    "ENERGY STAR Score": 17,
+    "Site EUI": 253
+  },
+  {
+    "ID": "hospital_8",
+    "Rank": 8,
+    "Property Name": "New England Baptist Hospital",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 425548,
+    "ENERGY STAR Score": 9,
+    "Site EUI": 282.1
+  },
+  {
+    "ID": "hospital_9",
+    "Rank": 9,
+    "Property Name": "PHS-BWH Main Campus",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 2138279,
+    "ENERGY STAR Score": 27,
+    "Site EUI": 321.1
+  },
+  {
+    "ID": "hospital_10",
+    "Rank": 10,
+    "Property Name": "BIDMC East && West Campus",
+    "Type": "Hospital (General Medical & Surgical)",
+    "Floor Area": 2921603,
+    "Site EUI": 322.7
+  },
+  {
+    "ID": "hotel_1",
+    "Rank": 1,
+    "Property Name": "Holiday Inn Express Boston Garden",
+    "Type": "Hotel",
+    "Floor Area": 54054,
+    "ENERGY STAR Score": 93,
+    "Site EUI": 53.5
+  },
+  {
+    "ID": "hotel_2",
+    "Rank": 2,
+    "Property Name": "Courtyard Boston Downtown",
+    "Type": "Hotel",
+    "Floor Area": 375000,
+    "ENERGY STAR Score": 80,
+    "Site EUI": 61.9
+  },
+  {
+    "ID": "hotel_3",
+    "Rank": 3,
+    "Property Name": "Copley Square Hotel",
+    "Type": "Hotel",
+    "Floor Area": 74214,
+    "ENERGY STAR Score": 61,
+    "Site EUI": 63.9
+  },
+  {
+    "ID": "hotel_4",
+    "Rank": 4,
+    "Property Name": "The Westin Copley Place, Boston",
+    "Type": "Hotel",
+    "Floor Area": 976515,
+    "ENERGY STAR Score": 74,
+    "Site EUI": 70.5
+  },
+  {
+    "ID": "hotel_5",
+    "Rank": 5,
+    "Property Name": "Doubletree Suites",
+    "Type": "Hotel",
+    "Floor Area": 244038,
+    "Site EUI": 71.2
+  },
+  {
+    "ID": "hotel_6",
+    "Rank": 6,
+    "Property Name": "Wyndham Boston at Beacon Hill",
+    "Type": "Hotel",
+    "Floor Area": 224602,
+    "ENERGY STAR Score": 79,
+    "Site EUI": 72.8
+  },
+  {
+    "ID": "hotel_7",
+    "Rank": 7,
+    "Property Name": "Four Seasons Place - Hotel/Condo Management",
+    "Type": "Hotel",
+    "Floor Area": 887170,
+    "ENERGY STAR Score": 35,
+    "Site EUI": 73.7
+  },
+  {
+    "ID": "hotel_8",
+    "Rank": 8,
+    "Property Name": "Bosbh-Boston Hilton Back Bay",
+    "Type": "Hotel",
+    "Floor Area": 393752,
+    "ENERGY STAR Score": 58,
+    "Site EUI": 74.5
+  },
+  {
+    "ID": "hotel_9",
+    "Rank": 9,
+    "Property Name": "Comfort Inn Boston",
+    "Type": "Hotel",
+    "Floor Area": 47094,
+    "ENERGY STAR Score": 43,
+    "Site EUI": 75.1
+  },
+  {
+    "ID": "hotel_10",
+    "Rank": 10,
+    "Property Name": "The langham Boston",
+    "Type": "Hotel",
+    "Floor Area": 280000,
+    "ENERGY STAR Score": 41,
+    "Site EUI": 75.5
+  },
+  {
+    "ID": "school_1",
+    "Rank": 1,
+    "Property Name": "EGLESTON",
+    "Type": "K-12 School",
+    "Floor Area": 30000,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 6.6
+  },
+  {
+    "ID": "school_2",
+    "Rank": 2,
+    "Property Name": "Saint John School",
+    "Type": "K-12 School",
+    "Floor Area": 58645,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 24.1
+  },
+  {
+    "ID": "school_3",
+    "Rank": 3,
+    "Property Name": "SUMNER",
+    "Type": "K-12 School",
+    "Floor Area": 49105,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 25.7
+  },
+  {
+    "ID": "school_4",
+    "Rank": 4,
+    "Property Name": "MATTAHUNT",
+    "Type": "K-12 School",
+    "Floor Area": 171035,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 30
+  },
+  {
+    "ID": "school_5",
+    "Rank": 5,
+    "Property Name": "MISSION",
+    "Type": "K-12 School",
+    "Floor Area": 64400,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 30.4
+  },
+  {
+    "ID": "school_6",
+    "Rank": 6,
+    "Property Name": "KENNEDY PJ",
+    "Type": "K-12 School",
+    "Floor Area": 36190,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 36.5
+  },
+  {
+    "ID": "school_7",
+    "Rank": 7,
+    "Property Name": "DEARBORN",
+    "Type": "K-12 School",
+    "Floor Area": 112128,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 36.9
+  },
+  {
+    "ID": "school_8",
+    "Rank": 8,
+    "Property Name": "MCKAY",
+    "Type": "K-12 School",
+    "Floor Area": 79082,
+    "ENERGY STAR Score": 97,
+    "Site EUI": 39.1
+  },
+  {
+    "ID": "school_9",
+    "Rank": 9,
+    "Property Name": "QUINCY MODULARS",
+    "Type": "K-12 School",
+    "Floor Area": 16960,
+    "ENERGY STAR Score": 96,
+    "Site EUI": 39.9
+  },
+  {
+    "ID": "school_10",
+    "Rank": 10,
+    "Property Name": "SHAW PA",
+    "Type": "K-12 School",
+    "Floor Area": 32706,
+    "ENERGY STAR Score": 99,
+    "Site EUI": 40.2
+  },
+  {
+    "ID": "lab_1",
+    "Rank": 1,
+    "Property Name": "Worcester City Campus Corp  -Massbiologics - Admin",
+    "Type": "Laboratory",
+    "Floor Area": 95000,
+    "Site EUI": 98.3
+  },
+  {
+    "ID": "lab_2",
+    "Rank": 2,
+    "Property Name": "2 Cummington Street (23-25 Blandford Street)",
+    "Type": "Laboratory",
+    "Floor Area": 61754,
+    "Site EUI": 155.9
+  },
+  {
+    "ID": "lab_3",
+    "Rank": 3,
+    "Property Name": "3-5 Cummington Street (616-620 Comm. Ave.)",
+    "Type": "Laboratory",
+    "Floor Area": 149118,
+    "Site EUI": 166.9
+  },
+  {
+    "ID": "lab_4",
+    "Rank": 4,
+    "Property Name": "Vertex TWO",
+    "Type": "Laboratory",
+    "Floor Area": 516693,
+    "Site EUI": 198.8
+  },
+  {
+    "ID": "lab_5",
+    "Rank": 5,
+    "Property Name": "HMS-Armenise",
+    "Type": "Laboratory",
+    "Floor Area": 133645,
+    "Site EUI": 219
+  },
+  {
+    "ID": "lab_6",
+    "Rank": 6,
+    "Property Name": "Vertex ONE",
+    "Type": "Laboratory",
+    "Floor Area": 685239,
+    "Site EUI": 220
+  },
+  {
+    "ID": "lab_7",
+    "Rank": 7,
+    "Property Name": "549 Albany Street - 535139",
+    "Type": "Laboratory",
+    "Floor Area": 105462,
+    "Site EUI": 222.6
+  },
+  {
+    "ID": "lab_8",
+    "Rank": 8,
+    "Property Name": "Harvard SPH 1",
+    "Type": "Laboratory",
+    "Floor Area": 164789,
+    "Site EUI": 230.3
+  },
+  {
+    "ID": "lab_9",
+    "Rank": 9,
+    "Property Name": "30-38 Cummington Street",
+    "Type": "Laboratory",
+    "Floor Area": 36563,
+    "Site EUI": 236.1
+  },
+  {
+    "ID": "lab_10",
+    "Rank": 10,
+    "Property Name": "HMS-Goldenson",
+    "Type": "Laboratory",
+    "Floor Area": 133445,
+    "Site EUI": 246.5
+  },
+  {
+    "ID": "multifamily_1",
+    "Rank": 1,
+    "Property Name": "26 Irwin Av",
+    "Type": "Multifamily Housing",
+    "Floor Area": 238221,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 1.5
+  },
+  {
+    "ID": "multifamily_2",
+    "Rank": 2,
+    "Property Name": "Commercial Wharf East Condominium",
+    "Type": "Multifamily Housing",
+    "Floor Area": 121932,
+    "Site EUI": 2.4
+  },
+  {
+    "ID": "multifamily_3",
+    "Rank": 3,
+    "Property Name": "Mandela Homes",
+    "Type": "Multifamily Housing",
+    "Floor Area": 114190,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 2.9
+  },
+  {
+    "ID": "multifamily_4",
+    "Rank": 4,
+    "Property Name": "416 Marlborough Street Condominium Trust",
+    "Type": "Multifamily Housing",
+    "Floor Area": 781000,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 3.8
+  },
+  {
+    "ID": "multifamily_5",
+    "Rank": 5,
+    "Property Name": "22 Hammond Street",
+    "Type": "Multifamily Housing",
+    "Floor Area": 114190,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 3.8
+  },
+  {
+    "ID": "multifamily_6",
+    "Rank": 6,
+    "Property Name": "Charlestown Navy Yard Rowhouses",
+    "Type": "Multifamily Housing",
+    "Floor Area": 28820,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 7.7
+  },
+  {
+    "ID": "multifamily_7",
+    "Rank": 7,
+    "Property Name": "Sidlaw Park Condominium",
+    "Type": "Multifamily Housing",
+    "Floor Area": 35000,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 8.1
+  },
+  {
+    "ID": "multifamily_8",
+    "Rank": 8,
+    "Property Name": "Fulton Court Condominium Trust",
+    "Type": "Multifamily Housing",
+    "Floor Area": 100800,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 8.5
+  },
+  {
+    "ID": "multifamily_9",
+    "Rank": 9,
+    "Property Name": "FOLIOBOSTON CONDOMINIUM TRUST",
+    "Type": "Multifamily Housing",
+    "Floor Area": 323789,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 9.4
+  },
+  {
+    "ID": "multifamily_10",
+    "Rank": 10,
+    "Property Name": "SYNH LLC",
+    "Type": "Multifamily Housing",
+    "Floor Area": 45324,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 10.1
+  },
+  {
+    "ID": "office_1",
+    "Rank": 1,
+    "Property Name": "500 Harrison Ave",
+    "Type": "Office",
+    "Floor Area": 145000,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 10
+  },
+  {
+    "ID": "office_2",
+    "Rank": 2,
+    "Property Name": "Southampton Street",
+    "Type": "Office",
+    "Floor Area": 44719,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 11.4
+  },
+  {
+    "ID": "office_3",
+    "Rank": 3,
+    "Property Name": "Huntington Plaza, Boston Symphony Orchestra",
+    "Type": "Office",
+    "Floor Area": 20000,
+    "Site EUI": 14.6
+  },
+  {
+    "ID": "office_4",
+    "Rank": 4,
+    "Property Name": "560 Harrison Ave",
+    "Type": "Office",
+    "Floor Area": 196000,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 15.1
+  },
+  {
+    "ID": "office_5",
+    "Rank": 5,
+    "Property Name": "882-888 Commonwealth Avenue",
+    "Type": "Office",
+    "Floor Area": 99352,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 20.4
+  },
+  {
+    "ID": "office_6",
+    "Rank": 6,
+    "Property Name": "HRE - 100 Holton St",
+    "Type": "Office",
+    "Floor Area": 115577,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 20.7
+  },
+  {
+    "ID": "office_7",
+    "Rank": 7,
+    "Property Name": "Warren Palmer LP",
+    "Type": "Office",
+    "Floor Area": 31973,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 23.2
+  },
+  {
+    "ID": "office_8",
+    "Rank": 8,
+    "Property Name": "44 School Street LLC",
+    "Type": "Office",
+    "Floor Area": 58921,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 23.8
+  },
+  {
+    "ID": "office_9",
+    "Rank": 9,
+    "Property Name": "46 Waltham St",
+    "Type": "Office",
+    "Floor Area": 80000,
+    "ENERGY STAR Score": 100,
+    "Site EUI": 28.1
+  },
+  {
+    "ID": "office_10",
+    "Rank": 10,
+    "Property Name": "239 Causeway Street",
+    "Type": "Office",
+    "Floor Area": 63750,
+    "Site EUI": 28.2
+  },
+  {
+    "ID": "dorm_1",
+    "Rank": 1,
+    "Property Name": "Barnes School Apartments LLc",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 145016,
+    "ENERGY STAR Score": 87,
+    "Site EUI": 45.9
+  },
+  {
+    "ID": "dorm_2",
+    "Rank": 2,
+    "Property Name": "HBS Morris Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 50786,
+    "ENERGY STAR Score": 91,
+    "Site EUI": 50.1
+  },
+  {
+    "ID": "dorm_3",
+    "Rank": 3,
+    "Property Name": "Riverway House",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 36940,
+    "ENERGY STAR Score": 88,
+    "Site EUI": 51.5
+  },
+  {
+    "ID": "dorm_4",
+    "Rank": 4,
+    "Property Name": "HBS Hamilton Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 49297,
+    "ENERGY STAR Score": 86,
+    "Site EUI": 53.3
+  },
+  {
+    "ID": "dorm_5",
+    "Rank": 5,
+    "Property Name": "HBS Esteves Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 78375,
+    "ENERGY STAR Score": 91,
+    "Site EUI": 53.6
+  },
+  {
+    "ID": "dorm_6",
+    "Rank": 6,
+    "Property Name": "St. Joseph Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 94450,
+    "ENERGY STAR Score": 85,
+    "Site EUI": 54
+  },
+  {
+    "ID": "dorm_7",
+    "Rank": 7,
+    "Property Name": "HBS Gallatin Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 50956,
+    "ENERGY STAR Score": 80,
+    "Site EUI": 58.6
+  },
+  {
+    "ID": "dorm_8",
+    "Rank": 8,
+    "Property Name": "1019 Commonwealth Avenue",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 77750,
+    "ENERGY STAR Score": 78,
+    "Site EUI": 65
+  },
+  {
+    "ID": "dorm_9",
+    "Rank": 9,
+    "Property Name": "Loretto Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 57190,
+    "ENERGY STAR Score": 81,
+    "Site EUI": 68.8
+  },
+  {
+    "ID": "dorm_10",
+    "Rank": 10,
+    "Property Name": "HBS McCulloch Hall",
+    "Type": "Residence Hall/Dormitory",
+    "Floor Area": 51821,
+    "ENERGY STAR Score": 70,
+    "Site EUI": 68.8
+  },
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {},
+  {}
+]
