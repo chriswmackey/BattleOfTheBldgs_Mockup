@@ -1,0 +1,81 @@
+ID,Rank,Property Name,Consolidated Property Types,Address,City,County,State,ZIP Code,Floor Area (ft^2),Year Built,Benchmarking Year,ENERGY STAR Score,Site EUI (kBtu/ft^2),Source EUI (kBtu/ft^2),Weather Normalized Site EUI (kBtu/ft^2),Weather Normalized Source EUI (kBtu/ft^2),Direct GHG Emissions (MtCO2e),Indirect GHG Emissions (MtCO2e),Total GHG Emissions (MtCO2e),Water Use Intensity (gal/ft^2),ENERGY STAR Certification Years,Tax Parcel
+hospital_1,1,PHS-Spaulding Rehabilitation Hospital - West Roxbury,Hospital (General Medical & Surgical),1245 Centre Street,Boston,Suffolk,MA,2132,71242,1980,2014,100,141.8,,,,,,512.4,,,
+hospital_2,2,Tufts Medical Center,Hospital (General Medical & Surgical),800 Washington St,Boston,Suffolk,MA,2111,2102964,1982,2014,75,174.4,,,,,,25142.6,29.32,,
+hospital_3,3,Hebrew Rehabilitation Center,Hospital (General Medical & Surgical),1200 Centre St,Boston,Suffolk,MA,2131,419575,1963,2014,91,182.4,,,,,,5215,,,
+hospital_4,4,Carney Hospital,Hospital (General Medical & Surgical),2100 Dorchester Avenue,Boston,Suffolk,MA,2124,540000,1953,2014,74,194.1,,,,,,7286.6,53.73,,1605017010
+hospital_5,5,Boston Medical Center,Hospital (General Medical & Surgical),One Boston Medical Center Place,Boston,Suffolk,MA,2118,2828429,1986,2014,33,215.2,,,,,,36992.5,40.85,,
+hospital_6,6,St. Elizabeth Medical Center,Hospital (General Medical & Surgical),736 Cambridge Street,Boston,Suffolk,MA,2135,651000,1960,2014,89,225.4,,,,,,9356.6,24.39,,2101836000;2101835100
+hospital_7,7,PHS-MGH Main Campus,Hospital (General Medical & Surgical),55 Fruit St.,Boston,Suffolk,MA,2114,4637402,1811,2014,17,253,,,,,,77894.7,35.1,,0300370000;0300445000;0300445001;0300370000
+hospital_8,8,New England Baptist Hospital,Hospital (General Medical & Surgical),125 Parker Hill Avenue,Boston,Suffolk,MA,2120,425548,1893,2014,9,282.1,,,,,,8657.5,52.95,,1001212000;1001213001
+hospital_9,9,PHS-BWH Main Campus,Hospital (General Medical & Surgical),75 Francis Street,Boston,Suffolk,MA,2115,2138279,1910,2014,27,321.1,,,,,,47893.7,26.67,,401896000
+hospital_10,10,BIDMC East && West Campus,Hospital (General Medical & Surgical),330 Brookline Ave.,Boston,Suffolk,MA,2215,2921603,1975,2014,,322.7,,,,,,56693.7,24.51,,0401862000;0401861000;0401944000;0401954000;0401964001;0401942000
+hotel_1,1,Holiday Inn Express Boston Garden,Hotel,280 Friend St,Boston,Suffolk,MA,2114,54054,1899,2014,93,53.5,,,,,,238.9,,,
+hotel_2,2,Courtyard Boston Downtown,Hotel,275 Tremont St,Boston,Suffolk,MA,2116,375000,1925,2014,80,61.9,,,,,,1665,32.21,,
+hotel_3,3,Copley Square Hotel,Hotel,47 Huntington Ave,Boston,Suffolk,MA,2116,74214,1891,2014,61,63.9,,,,,,456.8,67.35,,
+hotel_4,4,"The Westin Copley Place, Boston",Hotel,10 Huntington Avenue,Boston,Suffolk,MA,2116,976515,1982,2014,74,70.5,,,,,,4998.9,28.04,,401067010
+hotel_5,5,Doubletree Suites,Hotel,400 Soldiers Field Rd,Boston,Suffolk,MA,2134,244038,1990,2014,,71.2,,,,,,1390.8,73.39,,2200102000
+hotel_6,6,Wyndham Boston at Beacon Hill,Hotel,5 Blossom Street,Boston,Suffolk,MA,2114,224602,1968,2014,79,72.8,,,,,,1256.8,44.5,2013,300660002
+hotel_7,7,Four Seasons Place - Hotel/Condo Management,Hotel,200/220 Boylston Street,Boston,Suffolk,MA,2116,887170,1980,2014,35,73.7,,,,,,4858.8,27.19,,
+hotel_8,8,Bosbh-Boston Hilton Back Bay,Hotel,40 Dalton Street,Boston,Suffolk,MA,2115,393752,2007,2014,58,74.5,,,,,,2458.5,46.86,,401327000
+hotel_9,9,Comfort Inn Boston,Hotel,944 Morrissey Blvd,Boston,Suffolk,MA,2122,47094,1985,2014,43,75.1,,,,,,306,93.09,,1602553000
+hotel_10,10,The langham Boston,Hotel,250 Franklin St,Boston,Suffolk,MA,2110,280000,1922,2014,41,75.5,,,,,,274.9,,,304157000
+school_1,1,EGLESTON,K-12 School,3134 Wasington St,Boston,Suffolk,MA,2130,30000,1978,2014,100,6.6,,,,,,19,,,
+school_2,2,Saint John School,K-12 School,9 Moon Street,Boston,Suffolk,MA,2113,58645,1899,2014,100,24.1,,,,,,87.7,,,
+school_3,3,SUMNER,K-12 School,15 Basile St.,Boston,Suffolk,MA,2131,49105,1931,2014,100,25.7,,,,,,87.3,0.81,,
+school_4,4,MATTAHUNT,K-12 School,100 Hebron St.,Boston,Suffolk,MA,2126,171035,1977,2014,100,30,,,,,,352.7,0.5,,
+school_5,5,MISSION,K-12 School,67 Alleghany St.,Boston,Suffolk,MA,2120,64400,1925,2014,100,30.4,,,,,,109.8,0.29,,
+school_6,6,KENNEDY PJ,K-12 School,343 Saratoga St.,Boston,Suffolk,MA,2128,36190,1926,2014,100,36.5,,,,,,83.9,0.92,,
+school_7,7,DEARBORN,K-12 School,35 Geenville St.,Boston,Suffolk,MA,2119,112128,1913,2014,100,36.9,,,,,,248.5,0.35,,
+school_8,8,MCKAY,K-12 School,122 Cottage St.,Boston,Suffolk,MA,2128,79082,1926,2014,97,39.1,,,,,,210.8,1.05,,
+school_9,9,QUINCY MODULARS,K-12 School,900 Washington St.,Boston,Suffolk,MA,2111,16960,2000,2014,96,39.9,,,,,,51.4,1.19,,
+school_10,10,SHAW PA,K-12 School,429 Norfolk St.,Boston,Suffolk,MA,2124,32706,1919,2014,99,40.2,,,,,,81.8,0.5,,
+lab_1,1,Worcester City Campus Corp  -Massbiologics - Admin,Laboratory,458 Walk Hill Street,Boston,Suffolk,MA,2026,95000,2009,2014,,98.3,,,,,,903.5,18.34,,1405198175
+lab_2,2,2 Cummington Street (23-25 Blandford Street),Laboratory,2 Cummington Street (23-25 Blandford Street),Boston,Suffolk,MA,2215,61754,1905,2014,,155.9,,,,,,711.6,22.91,,2100295000
+lab_3,3,3-5 Cummington Street (616-620 Comm. Ave.),Laboratory,3-5 Cummington Street (616-620 Comm. Ave.),Boston,Suffolk,MA,2215,149118,1913,2014,,166.9,,,,,,1865.6,12.58,,2100350000
+lab_4,4,Vertex TWO,Laboratory,11 Fan Pier Blvd.,Boston,Suffolk,MA,2210,516693,2013,2014,,198.8,,,,,,7956.7,16.16,,602671017
+lab_5,5,HMS-Armenise,Laboratory,210 Longwood Ave,Boston,Suffolk,MA,2115,133645,1905,2014,,219,,,,,,2084.9,64.86,,401882000
+lab_6,6,Vertex ONE,Laboratory,50 Northern Ave,Boston,Suffolk,MA,2210,685239,2013,2014,,220,,,,,,9677.2,18.25,,602671015
+lab_7,7,549 Albany Street - 535139,Laboratory,549 Albany Street,Boston,Suffolk,MA,2118,105462,1895,2014,,222.6,,,,,,1806.6,3.15,,0801159000;0801161000;0801154010
+lab_8,8,Harvard SPH 1,Laboratory,665 Huntington Ave,Boston,Suffolk,MA,2115,164789,1960,2014,,230.3,,,,,,2720.2,7.92,,401880000
+lab_9,9,30-38 Cummington Street,Laboratory,30-38 Cummington Street,Boston,Suffolk,MA,2215,36563,1917,2014,,236.1,,,,,,640.1,73.24,,
+lab_10,10,HMS-Goldenson,Laboratory,220 Longwood,Boston,Suffolk,MA,2115,133445,1905,2014,,246.5,,,,,,2365.7,43.25,,401882000
+multifamily_1,1,26 Irwin Av,Multifamily Housing,26 Irwin Av,Boston,Suffolk,MA,2119,238221,1889,2014,100,1.5,,,,,,19.3,0.56,,1200403000
+multifamily_2,2,Commercial Wharf East Condominium,Multifamily Housing,49 Commercial Wharf,Boston,Suffolk,MA,2110,121932,1830,2014,,2.4,,,,,,27.9,22.98,,303028406
+multifamily_3,3,Mandela Homes,Multifamily Housing,1855 Washington Street,Boston,Suffolk,MA,2118,114190,1900,2014,100,2.9,,,,,,32.3,6.27,,901150000
+multifamily_4,4,416 Marlborough Street Condominium Trust,Multifamily Housing,41 6 Marlborough Street,Boston,Suffolk,MA,2115,781000,1988,2014,100,3.8,,,,,,202,4.87,,503596000
+multifamily_5,5,22 Hammond Street,Multifamily Housing,22 Hammond Street,Boston,Suffolk,MA,2120,114190,1900,2014,100,3.8,,,,,,42.5,19.47,,901850000
+multifamily_6,6,Charlestown Navy Yard Rowhouses,Multifamily Housing,110 First Ave,Boston,Suffolk,MA,2129,28820,1989,2014,100,7.7,,,,,,21.3,64.4,,203517500
+multifamily_7,7,Sidlaw Park Condominium,Multifamily Housing,"24, 28, 32 Sidlaw Road",Boston,Suffolk,MA,2135,35000,1928,2014,100,8.1,,,,,,27.6,48.68,,
+multifamily_8,8,Fulton Court Condominium Trust,Multifamily Housing,100 Fulton Street,Boston,Suffolk,MA,2109,100800,1990,2014,100,8.5,,,,,,82.5,20.44,,303478000
+multifamily_9,9,FOLIOBOSTON CONDOMINIUM TRUST,Multifamily Housing,80 Broad Street,Boston,Suffolk,MA,2110,323789,2006,2014,100,9.4,,,,,,294.6,11.38,,303990010
+multifamily_10,10,SYNH LLC,Multifamily Housing,115 St Stephen,Boston,Suffolk,MA,2115,45324,1950,2014,100,10.1,,,,,,43.3,43.91,,342026457
+office_1,1,500 Harrison Ave,Office,8 Randolph St,Boston,Suffolk,MA,2118,145000,1889,2014,100,10,,,,,,84.9,7.83,,306536000
+office_2,2,Southampton Street,Office,112 Southampton St,Boston,Suffolk,MA,2118,44719,2000,2014,100,11.4,,,,,,49.5,,,
+office_3,3,"Huntington Plaza, Boston Symphony Orchestra",Office,265 Huntington Avenue,Boston,Suffolk,MA,2115,20000,1950,2014,,14.6,,,,,,28.2,,,
+office_4,4,560 Harrison Ave,Office,100 Union Park St,Boston,Suffolk,MA,2118,196000,1902,2014,100,15.1,,,,,,233,23,,306529000
+office_5,5,882-888 Commonwealth Avenue,Office,882-888 Commonwealth Avenue,Boston,Suffolk,MA,2446,99352,1921,2014,100,20.4,,,,,,154.7,32.84,,
+office_6,6,HRE - 100 Holton St,Office,100 Holton St,Boston,Suffolk,MA,2135,115577,1975,2014,100,20.7,,,,,,130.4,5.53,,2200966000
+office_7,7,Warren Palmer LP,Office,7 Palmer Street,Boston,Suffolk,MA,2119,31973,1920,2014,100,23.2,,,,,,52.4,15.73,,802533010
+office_8,8,44 School Street LLC,Office,44 School Street,Boston,Suffolk,MA,2026,58921,1924,2014,100,23.8,,,,,,135.8,,,304704000
+office_9,9,46 Waltham St,Office,44 Waltham St,Boston,Suffolk,MA,2118,80000,1897,2014,100,28.1,,,,,,130.7,19.01,,305959000
+office_10,10,239 Causeway Street,Office,239 Causeway Street,Boston,Suffolk,MA,2114,63750,1917,2014,,28.2,,,,,,135.7,0.09,,1517000
+dorm_1,1,Barnes School Apartments LLc,Residence Hall/Dormitory,127 Marion Street,Boston,Suffolk,MA,2128,145016,1900,2014,87,45.9,,,,,,454.6,10.73,,105980000
+dorm_2,2,HBS Morris Hall,Residence Hall/Dormitory,14 Harvard Way,Boston,Suffolk,MA,2163,50786,1926,2014,91,50.1,,,,,,196.4,22.93,,2200530000
+dorm_3,3,Riverway House,Residence Hall/Dormitory,160-162 Riverway,Boston,Suffolk,MA,2215,36940,1910,2014,88,51.5,,,,,,137.5,3.03,,402000000
+dorm_4,4,HBS Hamilton Hall,Residence Hall/Dormitory,700 Soldiers Field Road,Boston,Suffolk,MA,2163,49297,1926,2014,86,53.3,,,,,,207.6,22.87,,
+dorm_5,5,HBS Esteves Hall,Residence Hall/Dormitory,45 Harvard Way,Boston,Suffolk,MA,2163,78375,1969,2014,91,53.6,,,,,,315.8,,,2200530000
+dorm_6,6,St. Joseph Hall,Residence Hall/Dormitory,430 The Fenway,Boston,Suffolk,MA,2115,94450,1966,2014,85,54,,,,,,361.1,38.81,,401847000
+dorm_7,7,HBS Gallatin Hall,Residence Hall/Dormitory,24 Harvard Way,Boston,Suffolk,MA,2163,50956,1926,2014,80,58.6,,,,,,238.9,22.92,,2200530000
+dorm_8,8,1019 Commonwealth Avenue,Residence Hall/Dormitory,1019 Commonwealth Avenue,Boston,Suffolk,MA,2215,77750,1977,2014,78,65,,,,,,367.5,35.04,,2100468000
+dorm_9,9,Loretto Hall,Residence Hall/Dormitory,420 The Fenway,Boston,Suffolk,MA,2115,57190,1964,2014,81,68.8,,,,,,259.3,32.77,,401847000
+dorm_10,10,HBS McCulloch Hall,Residence Hall/Dormitory,44 Harvard Way,Boston,Suffolk,MA,2163,51821,1926,2014,70,68.8,,,,,,286.7,23.48,,2200530000
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,

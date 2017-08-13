@@ -43,10 +43,10 @@ var ProcessCSV = function (loadFrom) {
     };
     var _getTypedVal = function (type, valStr) {
         if (type === 'DECIMAL') {
-            return numeral().unformat(valStr);
+            return numeral(valStr).value();
         }
         if (type === 'INTEGER' || type.type === 'NUMERIC_RATING_W_CODES') {
-            return Math.round(numeral().unformat(valStr));
+            return Math.round(numeral(valStr).value());
         }
         return valStr;
     };

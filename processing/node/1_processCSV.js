@@ -1,15 +1,42 @@
 const ProcessCSV = require('./ProcessCSV').ProcessCSV;
 
 function processBuilding() {
-    const dataLoader = new ProcessCSV('../../csv/master2.csv');
+    const dataLoader = new ProcessCSV('../../csv/2014_BERDO.csv');
 
     const fieldSets = {
         "fieldSets": [
             {
                 "fields": [
                     {
+                        "field": "ID",
+                        "type": "TEXT"
+                    },
+                    {
+                        "field": "Rank",
+                        "type": "INTEGER"
+                    },
+                    {
                         "field": "Property Name",
                         "type": "TEXT"
+                    },
+                    {
+                        "field": "Consolidated Property Types",
+                        "shortName": "Type",
+                        "type": "TEXT"
+                    },
+                    {
+                        "field": "Floor Area (ft^2)",
+                        "shortName": "Floor Area",
+                        "type": "DECIMAL"
+                    },
+                    {
+                        "field": "ENERGY STAR Score",
+                        "type": "DECIMAL"
+                    },
+                    {
+                        "field": "Site EUI (kBtu/ft^2)",
+                        "shortName": "Site EUI",
+                        "type": "DECIMAL"
                     }
                 ]
             }
