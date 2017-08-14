@@ -120,33 +120,13 @@ const application = function (app) {
         app.addLights();
         app.loadModels();
 
-        // const onDocumentMouseDown = function (e) {
-        //     app.mouseDown.x = ( event.clientX / (window.innerWidth) ) * 2 - 1;// * _split NB: if not overlapping camera view, use window.innerWidth * _split
-        //     app.mouseDown.y = -( event.clientY / window.innerHeight ) * 2 + 1;
-        // };
-        // const onDocumentMouseMove = function (event) {
-        //     event.preventDefault();
-        //     app.mouse.x = ( event.clientX / (window.innerWidth) ) * 2 - 1;
-        //     app.mouse.y = -( event.clientY / window.innerHeight ) * 2 + 1;
-        // };
-        // const onDocumentMouseUp = function (e) {
-        //     if (app.mouse.distanceTo(app.mouseDown) < 0.001) {//ignore drags
-        //         // app.viewCamera.position.copy(app.axesMouse.position);
-        //         // app.axes.position.copy(app.axesMouse.position);
-        //     }
-        // };
-        // app.renderer.domElement.addEventListener('mousedown', onDocumentMouseDown, false);
-        // app.renderer.domElement.addEventListener('mouseup', onDocumentMouseUp, false);
-        // app.renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);
+        // app.axesMouse = new THREE.AxisHelper(5);
+        // app.scene.add(app.axesMouse);
 
-        // var cube;
-        // cube = new THREE.Mesh(new THREE.CubeGeometry(100, 100, 100), new THREE.MeshNormalMaterial());
-        // app.scene.add(cube);
-        app.axesMouse = new THREE.AxisHelper(5);
-        app.scene.add(app.axesMouse);
+        // app.axes = new THREE.AxisHelper(100);
+        // app.scene.add(app.axes);
 
-        app.axes = new THREE.AxisHelper(100);
-        app.scene.add(app.axes);
+        app.domEvents = new THREEx.DomEvents(app.camera, app.renderer.domElement);
 
         const labelsY = [];
         for (var j = 1; j <= topNum; j++) {
@@ -194,17 +174,17 @@ const application = function (app) {
         const scale = 1;
         const loader = new THREE.OBJLoader(manager);
 
-        loader.load('obj/city.obj', function (object) {
-            setMaterials(object, materialExBldgs, false, false);
-            object.scale.set(scale, scale, scale);
-
-            object.position.x = offset.x;
-            object.position.y = offset.y;
-            object.position.z = offset.z;
-
-            app.scene.add(object);
-            app.cityModel = object;
-        });
+        // loader.load('obj/city.obj', function (object) {
+        //     setMaterials(object, materialExBldgs, false, false);
+        //     object.scale.set(scale, scale, scale);
+        //
+        //     object.position.x = offset.x;
+        //     object.position.y = offset.y;
+        //     object.position.z = offset.z;
+        //
+        //     app.scene.add(object);
+        //     app.cityModel = object;
+        // });
 
         const typeMaterials = {};
         Object.keys(typeColors).forEach(function (type) {
@@ -231,14 +211,18 @@ const application = function (app) {
 
                     app.scene.add(object);
 
+                    app.domEvents.addEventListener(object, 'click', function (event) {
+                        showInfo(id);
+                    }, false);
+
                     app.typeModels[id] = {
                         object: object,
                         modePositions: {
                             city: offset,
                             grid: {
-                                x: padSize.left + gridSize.x * i - bounds.min.x,
+                                x: padSize.left + gridSize.x * i - bounds.min.x + (gridSize.x - (bounds.max.x - bounds.min.x)) / 2,
                                 y: -bounds.min.y,
-                                z: padSize.top + gridSize.y * zPos - bounds.min.z
+                                z: padSize.top + gridSize.y * zPos - bounds.min.z + (gridSize.y - (bounds.max.z - bounds.min.z)) / 2
                             }
                         },
                         animationHelpers: {

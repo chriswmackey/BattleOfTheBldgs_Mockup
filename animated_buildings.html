@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <title>Animated Buildings</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r81/three.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 
     <script src="lib/OBJLoader.js"></script>
     <script src="lib/OrbitControls.js"></script>
+    <script src="lib/threex.domevents.js"></script>
 
     <script src="lib/chroma.min.js"></script>
     <script src="lib/dat.gui.min.js"></script>
-    <style>
-        body, html {
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 <canvas id="matrix-texture" width="2048" height="2048" style="display: none"></canvas>
 <script src="matrixCanvas.js?v=0.1"></script>
 <script src="animatedBuildings.js?v=0.1"></script>
+<script src="InfoPanel.js?v=0.1"></script>
+<script src="ui.js?v=0.1"></script>
 </body>
 </html>
