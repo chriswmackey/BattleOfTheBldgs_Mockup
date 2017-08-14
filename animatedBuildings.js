@@ -13,7 +13,7 @@ const typeColors = {
 const materialExBldgs = new THREE.MeshLambertMaterial({
     color: '#595b6d',
     side: THREE.FrontSide,
-    // emissive: '#707287'
+    emissive: '#26262e'
 });
 
 const backgroundColor = '#333333';
@@ -78,6 +78,9 @@ const application = function (app) {
         if (app.cityModel) {
             app.cityModel.visible = !inter.gridMode;
         }
+        if (app.baseMap) {
+            app.baseMap.visible = !inter.gridMode;
+        }
         app.matrixCanvas.geometry.visible = inter.gridMode;
         if (!app.typeModels) return;
         const mode = inter.gridMode ? 'grid' : 'city';
@@ -139,13 +142,20 @@ const application = function (app) {
     };
 
     app.addLights = function () {
-        const light1 = new THREE.DirectionalLight(0xffffff, 0.8);
-        light1.position.set(0, 1, 0).normalize();
-        app.scene.add(light1);
+        // var ambient = new THREE.AmbientLight( 0x454545 );
+        // app.scene.add( ambient );
 
-        const light2 = new THREE.DirectionalLight(0xffffff, 0.8);
-        light2.position.set(1, 1, -1).normalize();
-        app.scene.add(light2);
+        var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.75);
+        directionalLight.position.set( 0, 1, 0.5 ).normalize();
+        app.scene.add( directionalLight );
+
+        // const light1 = new THREE.DirectionalLight(0xffffff, 0.8);
+        // light1.position.set(0, 1, 0).normalize();
+        // app.scene.add(light1);
+        //
+        // const light2 = new THREE.DirectionalLight(0xffffff, 0.8);
+        // light2.position.set(1, 1, -1).normalize();
+        // app.scene.add(light2);
     };
 
     app.loadModels = function () {
@@ -185,6 +195,49 @@ const application = function (app) {
             app.scene.add(object);
             app.cityModel = object;
         });
+
+        var mtlLoader = new THREE.MTLLoader();
+        mtlLoader.setPath( 'obj/' );
+        mtlLoader.load( 'imgUnderlay.mtl', function( materials ) {
+
+            materials.preload();
+
+            var objLoader = new THREE.OBJLoader();
+            objLoader.setMaterials( materials );
+            objLoader.setPath( 'obj/' );
+            objLoader.load( 'imgUnderlay.obj', function ( object ) {
+
+                    object.scale.set(scale, scale, scale);
+
+                    object.position.x = offset.x;
+                    object.position.y = offset.y;
+                    object.position.z = offset.z;
+
+                    app.scene.add(object);
+                    app.baseMap = object;
+
+            });
+
+        });
+
+//         var mtlLoader = new THREE.MTLLoader();
+//         mtlLoader.setPath( 'obj/' );
+//         mtlLoader.load( 'imgUnderlay.mtl', function( materials ) {
+//
+//             materials.preload();
+//
+//             var objLoader = new THREE.OBJLoader();
+//             objLoader.setMaterials( materials );
+//             objLoader.setPath( 'obj/' );
+//             objLoader.load( 'imgUnderlay.obj', function ( object ) {
+//
+// //						object.position.y = 0;
+//                 app.scene.add( object );
+//
+//             });
+//
+//         });
+
 
         const typeMaterials = {};
         const typeMaterialsSelected = {};
