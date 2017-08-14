@@ -17,6 +17,10 @@ $(document).ready(function () {
             buildingsById[building.ID] = building;
         });
         showInfo = function (id) {
+            if (!id) {
+                infoPanel.showProperties({});
+                return;
+            }
             var building = buildingsById[id];
             var type = building.ID.split('_')[0];
             infoPanel.showProperties(building, typeColors[type]);

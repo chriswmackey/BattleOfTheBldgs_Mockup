@@ -173,24 +173,30 @@ const application = function (app) {
 
         const scale = 1;
         const loader = new THREE.OBJLoader(manager);
-
-        loader.load('obj/city.obj', function (object) {
-            setMaterials(object, materialExBldgs, false, false);
-            object.scale.set(scale, scale, scale);
-
-            object.position.x = offset.x;
-            object.position.y = offset.y;
-            object.position.z = offset.z;
-
-            app.scene.add(object);
-            app.cityModel = object;
-        });
+        //
+        // loader.load('obj/city.obj', function (object) {
+        //     setMaterials(object, materialExBldgs, false, false);
+        //     object.scale.set(scale, scale, scale);
+        //
+        //     object.position.x = offset.x;
+        //     object.position.y = offset.y;
+        //     object.position.z = offset.z;
+        //
+        //     app.scene.add(object);
+        //     app.cityModel = object;
+        // });
 
         const typeMaterials = {};
+        const typeMaterialsSelected = {};
         Object.keys(typeColors).forEach(function (type) {
             typeMaterials[type] = new THREE.MeshLambertMaterial({
                 color: typeColors[type],
-                emissive: chroma(typeColors[type]).darken().hex(),
+                emissive: chroma(typeColors[type]).darken().darken().hex(),
+                side: THREE.DoubleSide
+            });
+            typeMaterialsSelected[type] = new THREE.MeshLambertMaterial({
+                color: typeColors[type],
+                emissive: typeColors[type],
                 side: THREE.DoubleSide
             });
         });
@@ -212,7 +218,20 @@ const application = function (app) {
                     app.scene.add(object);
 
                     app.domEvents.addEventListener(object, 'click', function (event) {
-                        showInfo(id);
+                        if (!app.selectedObject) app.selectedObject = {};//init
+
+                        if (app.selectedObject.object) {
+                            setMaterials(app.selectedObject.object, typeMaterials[app.selectedObject.type], false, false);
+                        }
+                        if (app.selectedObject.object !== object) {
+                            setMaterials(object, typeMaterialsSelected[type], false, false);
+                            showInfo(id);
+                            app.selectedObject = {object:object, type: type};
+                        } else {
+                            app.selectedObject = {};
+                            showInfo()
+                        }
+
                     }, false);
 
                     app.typeModels[id] = {
