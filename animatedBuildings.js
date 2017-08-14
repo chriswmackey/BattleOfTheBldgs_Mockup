@@ -174,17 +174,17 @@ const application = function (app) {
         const scale = 1;
         const loader = new THREE.OBJLoader(manager);
 
-        // loader.load('obj/city.obj', function (object) {
-        //     setMaterials(object, materialExBldgs, false, false);
-        //     object.scale.set(scale, scale, scale);
-        //
-        //     object.position.x = offset.x;
-        //     object.position.y = offset.y;
-        //     object.position.z = offset.z;
-        //
-        //     app.scene.add(object);
-        //     app.cityModel = object;
-        // });
+        loader.load('obj/city.obj', function (object) {
+            setMaterials(object, materialExBldgs, false, false);
+            object.scale.set(scale, scale, scale);
+
+            object.position.x = offset.x;
+            object.position.y = offset.y;
+            object.position.z = offset.z;
+
+            app.scene.add(object);
+            app.cityModel = object;
+        });
 
         const typeMaterials = {};
         Object.keys(typeColors).forEach(function (type) {
